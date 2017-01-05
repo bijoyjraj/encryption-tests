@@ -2,8 +2,8 @@ import skimage as sk
 import skimage.io as skio
 import random
 import sys
-inputimg = "fisat.jpg"
-outputimg = "fisat3.jpg"
+inputimg = "fisat3.jpg"
+outputimg = "fisat4.jpg"
 pwd = raw_input("PASSWORD :")
 Pwd = list(pwd)
 image = skio.imread(inputimg)
@@ -19,7 +19,7 @@ for i in range(row):
             pp += 1
             if pp >= pl:
                 pp = 0
-            val = (ival + pval) % 256
+            val = (ival - pval) % 256
             image[i,j,k] = val
 
 skio.imsave(outputimg,image)
