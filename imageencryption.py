@@ -22,7 +22,7 @@ def encrypt(inputfile,outputfile):
     image = skio.imread(img_in + ".jpg")
     PWD = create_pass()
     r,c,ch = image.shape
-    f = open(img_out1 + ".txt",'w')
+    f = open(img_out1 + ".jpg",'w')
     string = ""
     #actual encryption
     for i in range(r):
@@ -44,7 +44,7 @@ def decrypt(inputfile,outputfile,PWD,r,c,ch):
     img_out1 = inputfile
     img_out2 = outputfile
     #initialising required values
-    f = open(img_out1 + ".txt", 'r')
+    f = open(img_out1 + ".jpg", 'r')
     string = f.read()
     f.close()
     string = string.split()
